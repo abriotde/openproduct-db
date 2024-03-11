@@ -21,7 +21,7 @@
 LOCK TABLES `produce` WRITE;
 /*!40000 ALTER TABLE `produce` DISABLE KEYS */;
 INSERT INTO `produce` (`id`, `fr`, `en`, `category`, `parent`) VALUES (1,'Lait',NULL,'L',NULL),
-(2,'Oeuf',NULL,'V',NULL),
+(2,'Oeufs',NULL,'V',NULL),
 (3,'viande de boeuf',NULL,'V',NULL),
 (4,'viande de mouton',NULL,'V',NULL),
 (5,'charcuterie',NULL,'V',NULL),
@@ -192,7 +192,50 @@ INSERT INTO `produce` (`id`, `fr`, `en`, `category`, `parent`) VALUES (1,'Lait',
 (186,'Boudin',NULL,'A2',NULL),
 (187,'Saucisson',NULL,'A2',NULL),
 (188,'Truite',NULL,'AP',NULL),
-(190,'Tasse',NULL,NULL,NULL);
+(190,'Tasse',NULL,NULL,NULL),
+(191,'AMAP',NULL,'AG9',NULL),
+(192,'Volailles',NULL,'A',NULL),
+(193,'Légumes',NULL,NULL,NULL),
+(194,'AB',NULL,NULL,NULL),
+(195,'Paysan (Producteur)',NULL,NULL,NULL),
+(196,'Eleveur (Paysan)',NULL,NULL,NULL),
+(197,'Viande Bovine (Eleveur)',NULL,NULL,NULL),
+(198,'Producteur',NULL,NULL,NULL),
+(199,'Producteur Disponible',NULL,NULL,NULL),
+(200,'Maraîcher (Paysan)',NULL,NULL,NULL),
+(201,'Herbes Aromatiques (Paysan)',NULL,NULL,NULL),
+(202,'Oeufs (Eleveur)',NULL,NULL,NULL),
+(203,'Volailles (Eleveur)',NULL,NULL,NULL),
+(204,'Boulanger (Paysan)',NULL,NULL,NULL),
+(205,'Lait & Fromage Chèvre (Eleveur)',NULL,NULL,NULL),
+(206,'Confitures et Gelées (Paysan)',NULL,NULL,NULL),
+(207,'Huile (Paysan)',NULL,NULL,NULL),
+(208,'Lait & Fromage de Vaches (Eleveur)',NULL,NULL,NULL),
+(209,'Viande Porcine (Eleveur)',NULL,NULL,NULL),
+(210,'Apiculteur (Paysan)',NULL,NULL,NULL),
+(211,'Miel (Apiculteur)',NULL,NULL,NULL),
+(212,'Viande Ovine (Eleveur)',NULL,NULL,NULL),
+(213,'Céréales et Farines (Paysan)',NULL,NULL,NULL),
+(214,'Arboriculteur (Paysan)',NULL,NULL,NULL),
+(215,'Boissons (Paysan)',NULL,NULL,NULL),
+(216,'Champignons (Paysan)',NULL,NULL,NULL),
+(217,'Viande de Lapin (Eleveur)',NULL,NULL,NULL),
+(218,'GEOLOC A FAIRE',NULL,NULL,NULL),
+(219,'Légumes secs (Paysan)',NULL,NULL,NULL),
+(220,'Saliculteur (Paysan)',NULL,NULL,NULL),
+(221,'Lait & Fromage de Brebis (Eleveur)',NULL,NULL,NULL),
+(222,'Vin (Viticulteur)',NULL,NULL,NULL),
+(223,'Viticulteur (Paysan)',NULL,NULL,NULL),
+(224,'Pâtes (Paysan)',NULL,NULL,NULL),
+(225,'Artisan (Producteur)',NULL,NULL,NULL),
+(226,'Fromages (Artisan)',NULL,NULL,NULL),
+(227,'Safran (Paysan)',NULL,NULL,NULL),
+(228,'Cidre (Arboriculteur)',NULL,NULL,NULL),
+(229,'Pêcheur',NULL,NULL,NULL),
+(230,'Conversion AB',NULL,NULL,NULL),
+(231,'Viande',NULL,'V',NULL),
+(232,'fruit',NULL,'F',NULL),
+(233,'Alcool',NULL,'F',NULL);
 /*!40000 ALTER TABLE `produce` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -204,4 +247,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-08 23:01:43
+-- Dump completed on 2024-03-12  0:30:52
