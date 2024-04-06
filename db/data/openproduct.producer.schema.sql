@@ -62,7 +62,7 @@ CREATE TABLE `producer` (
   UNIQUE KEY `latitude` (`latitude`,`longitude`),
   UNIQUE KEY `name` (`name`,`city`),
   KEY `postcode` (`postCode`)
-) ENGINE=MyISAM AUTO_INCREMENT=11954 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11956 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -74,4 +74,4 @@ CREATE TABLE `producer` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-04 16:10:14
+-- Dump completed on 2024-04-06 10:45:48
