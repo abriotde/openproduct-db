@@ -1,8 +1,9 @@
--- MariaDB dump 10.19  Distrib 10.11.6-MariaDB, for debian-linux-gnu (x86_64)
+/*!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19  Distrib 10.11.8-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: openproduct
 -- ------------------------------------------------------
--- Server version	10.11.6-MariaDB-0ubuntu0.23.10.2
+-- Server version	10.11.8-MariaDB-0ubuntu0.24.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -62,7 +63,7 @@ CREATE TABLE `producer` (
   UNIQUE KEY `latitude` (`latitude`,`longitude`),
   UNIQUE KEY `name` (`name`,`city`),
   KEY `postcode` (`postCode`)
-) ENGINE=MyISAM AUTO_INCREMENT=11956 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11960 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
