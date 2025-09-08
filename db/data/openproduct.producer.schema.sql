@@ -1,9 +1,9 @@
-/*!999999\- enable the sandbox mode */ 
--- MariaDB dump 10.19  Distrib 10.11.8-MariaDB, for debian-linux-gnu (x86_64)
+/*M!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19-11.4.7-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: openproduct
 -- ------------------------------------------------------
--- Server version	10.11.8-MariaDB-0ubuntu0.24.04.1
+-- Server version	11.4.7-MariaDB-0ubuntu0.25.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,7 +14,7 @@
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*M!100616 SET @OLD_NOTE_VERBOSITY=@@NOTE_VERBOSITY, NOTE_VERBOSITY=0 */;
 
 --
 -- Table structure for table `producer`
@@ -22,7 +22,7 @@
 
 DROP TABLE IF EXISTS `producer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `producer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `latitude` double DEFAULT NULL,
@@ -39,7 +39,6 @@ CREATE TABLE `producer` (
   `phoneNumber` varchar(16) DEFAULT NULL,
   `phoneNumber2` varchar(16) DEFAULT NULL,
   `email` varchar(256) DEFAULT NULL,
-  `sendEmail` enum('Never','Yes','wrongEmail') DEFAULT NULL,
   `website` varchar(256) DEFAULT NULL,
   `websiteStatus` enum('ok','unknown','ko','ConnectionError','300','400','500') NOT NULL DEFAULT 'unknown',
   `status` enum('actif','pause','hs','unknown','non-interesse','hors-sujet','to-check') NOT NULL DEFAULT 'actif',
@@ -51,7 +50,9 @@ CREATE TABLE `producer` (
   `openingHours` varchar(1024) DEFAULT NULL,
   `categories` varchar(16) DEFAULT NULL,
   `geoprecision` double DEFAULT 1,
+  `sendEmail` enum('Never','Yes','wrongEmail') DEFAULT NULL,
   `nbMailSend` smallint(6) DEFAULT 0,
+  `lastEmailSendDate` datetime DEFAULT NULL,
   `nbModeration` smallint(6) DEFAULT 0,
   `noteModeration` varchar(1024) DEFAULT NULL,
   `preferences` varchar(100) DEFAULT NULL,
@@ -59,11 +60,13 @@ CREATE TABLE `producer` (
   `startdate` date DEFAULT NULL,
   `enddate` date DEFAULT NULL,
   `lastUpdateDate` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `label` tinyint(4) DEFAULT NULL,
+  `labels` enum('EntreprisePatrimoineVivant','') DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `latitude` (`latitude`,`longitude`),
   UNIQUE KEY `name` (`name`,`city`),
   KEY `postcode` (`postCode`)
-) ENGINE=MyISAM AUTO_INCREMENT=11960 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12913 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -73,5 +76,5 @@ CREATE TABLE `producer` (
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
